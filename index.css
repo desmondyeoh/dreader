@@ -1,0 +1,96 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+}
+.scene{
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0px;
+  z-index: 0;
+}
+
+/* Navbar */
+.navbar{
+  position:absolute;
+  bottom:0;
+  color:red;
+  width:100%;
+  z-index: 0;
+}
+
+.navbar li {
+  float:left;
+  background:cyan;
+  list-style-type: none;
+  width: 20%;
+  height:50px;
+  text-align:center;
+  line-height:50px;
+}
+.navbar li a {
+}
+
+/* Library Scene */
+
+#library-scene {
+  display: none;
+}
+.book {
+  border: 1px solid gray;
+  background:lime;
+  box-shadow:5px 5px 5px #bdbdbd;
+  width: 100px;
+  height: 100px;
+  margin:20px;
+  float: left;
+  cursor:default;
+}
+
+.author{
+  color: gray;
+}
+
+
+/* Book Scene */
+.book-scene{
+}
+.dict-modal{
+  position: fixed;
+  background:white;
+  border: 1px solid black;
+  margin: 5vh;
+  padding: 20px;
+  height: 90vh;
+  z-index: 20;
+  box-shadow: 0 0 0 5vh rgba(0,0,0,0.5);
+}
+.page-header>*{
+  display: inline-block;
+  color: #999;
+}
+.page-stopwatch{
+  float: left;
+  width: 15%;
+}
+.page-booktitle{
+  float: left;
+  width: 70%;
+  text-align: center;
+}
+.page-progress{
+  float: left;
+  width: 15%;
+  text-align: right;
+}
+.page{
+  font-size: 2em;
+  padding: 10px 25px 0;
+  z-index: 1;
+  border: 1px solid gray;
+}

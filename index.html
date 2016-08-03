@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dreaderApp">
+<head>
+  <title>Dreader</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+  <script src="live.js"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ 
+  <!-- Start unique-navbar-Ctrl -->
+  <div class="navbar" id="unique-navbar" ng-controller="UniqueNavbarCtrl as uniqueNavbar">
+    <ul>
+      <li><a href="">Lib</a></li>
+      <li><a href="">Vc</a></li>
+      <li><a href="">BM</a></li>
+      <li><a href="">Hl</a></li>
+      <li><a href="">St</a></li>
+    </ul>
+  </div><!-- End unique-navbar-Ctrl -->
+
+  <!-- Start library-scene-Ctrl -->
+  <div class="scene" id="library-scene" ng-controller="LibrarySceneCtrl as libraryScene">
+    <div class="shelf" id="book-shelf">
+      <div class="book" id="unique-book" ng-repeat="book in books">   
+        <div class="booktitle" id="unique-booktitle">
+          {{book.title}} 
+        </div><!-- End unique-booktitle -->
+        <div class="author" id="unique-author">
+          {{book.author}} 
+        </div><!-- End unique-author -->
+      </div><!-- End unique-book -->
+    </div><!-- End book-shelf -->
+  </div><!-- End library-scene-Ctrl -->
+  
+  <!-- Start book-scene-Ctrl -->
+  <div class="scene" id="book-scene" ng-controller="BookSceneCtrl as bookScene">
+    <div class="dict-modal" id="unique-dict-modal">
+      <div class="dict-x" id="unique-dict-x">
+        X
+      </div><!-- End unique-dict-x -->
+      <div class="dict-page" id="unique-dict-page">
+        <h1 class="dict-word">Lettuce</h1>
+        <h2 class="dict-word-type">noun</h2>
+          <ul class="dict-explanation-holder">
+            <li class="dict-explanation">1. A vegetable that is not even tasty. It tastes very like mud.</li>
+            <li class="dict-explanation">2. Taste like shit.</li>
+          </ul>
+      </div><!-- End unique-dict-page -->
+      <div class="dict-nav-holder" id="unique-dict-nav-holder">
+        <div class="dict-nav" id="left-dict-nav">&lt;</div>
+        <div class="dict-nav" id="right-dict-nav">&gt;</div>
+      </div><!-- End unique-dict-nav-holder -->
+    </div><!-- End unique-dict-modal -->
+    <div class="page-header" id="unique-page-header">
+      <div class="page-stopwatch" id="unique-page-stopwatch">
+        10:23
+      </div><!-- End unique-page-stopwatch -->
+      <div class="page-booktitle" id="unique-page-booktitle">
+        Man's Search for Meaning
+      </div><!-- End unique-page-booktitle -->
+      <div class="page-progress" id="unique-page-progress">
+        98.3%
+      </div><!-- End unique-page-progress -->
+    </div><!-- End unique-page-header -->
+    <div class="page-holder" id="unique-page-holder">
+      Chapter 1\n Man's Search for Meaning. Let me try a superduperlongwordthatspansthroughmanylines. This book is distributed for five fucking years and still counting. I have no idea what the hypen-a-ted-words-gonna-work-here but i think it's going to be fine. Yep.. As long as you make sure it's going well. So... But anyway, i think this words are going to exceed page 2 soon. These stuff are in page 2, which are so nice to test the scrolling. Let's try to expand this to page number three. I want to try the round off function of the page controller which is going to be displayed at the top right corner of this page. Hopefully it works.
+    </div><!-- End unique-page-holder -->   
+  </div><!-- End book-scene-Ctrl --> 
+
+</body>
+</html>
